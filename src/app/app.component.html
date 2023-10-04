@@ -1,4 +1,35 @@
-<app-herosection
+<!-- BUUUUUUUUG: self appear `;` and `:` -->
+<!--
+<div *ngFor="let num; in: counter">
+  <p *ngIf=" % 2 === 0">{{ x }}</p>
+</div>
+<div *ngFor="let x; in: counter">
+  <p *ngIf="x % 2 != 0">{{ x }}</p>
+</div>
+-->
+
+<app-hero-section
   [mainText]="mainText"
   [secondText]="secondText"
-></app-herosection>
+></app-hero-section>
+
+<div *ngFor="let num of counter">
+  <p *ngIf="num % 2 === 0">{{ num }}</p>
+</div>
+<div *ngFor="let num of counter">
+  <p *ngIf="num % 2 != 0">{{ num }}</p>
+</div>
+
+<div *ngFor="let x of counter">
+  <span *ngIf="x % 2 === 0">{{ x }}</span>
+</div>
+<div *ngFor="let x of counter">
+  <span *ngIf="x % 2 != 0">{{ x }}</span>
+</div>
+
+<div>
+  <p>I pari sono: {{ pari }}</p>
+</div>
+<div>
+  <p>I dispari sono: {{ dispari }}</p>
+</div>
