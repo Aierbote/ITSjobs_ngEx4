@@ -1,2 +1,16 @@
 <p>mainText: {{ mainText }}</p>
 <p>secondText: {{ secondText }}</p>
+
+<app-navbar
+  (sendValue)="onEvent($event)"
+  (sendNumber)="onNumber($event)"
+  (numbers)="onAnswer($event)"
+>
+  <!--`$event` è il nome generico per un event di Angular -->
+</app-navbar>
+<p>Il booleano è stato ricevuto? {{ booleanoRicevuto }}</p>
+<p>Il numbero che voglio vedere è: {{ numeroDaVisualizzare }}</p>
+<p>La risposta del figlio: {{ comeRisposta }}</p>
+
+<app-sidebar (output)="riceviStringaDalFiglio($event)"></app-sidebar>
+<p>La stringa che sto visualizzando è {{ appString }}</p>
